@@ -1,16 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class Board{
-    int id;
-    String title;
-    String content;
-    String writer;
-    String date;
-}
-class BoardManager{
-    static ArrayList<Board> boardList = new ArrayList<>();
-}
 class Visit{
     public static void main(String[] args){
 
@@ -19,7 +9,7 @@ class Visit{
         System.out.println("Look it up ? (y/n)");
         String yn = sc.nextLine();
 
-        while(yn.equals("y")){
+        if(yn.equals("y")){
             int k = BoardManager.boardList.size();
             int n = 0;
             boolean d = false;
