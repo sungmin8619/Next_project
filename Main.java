@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-  static ArrayList<Board> boardList = new ArrayList<>(); // 회의에서 변수명 정하기
+  static ArrayList<Board> boardList = new ArrayList<>(); 
   static Scanner scanner = new Scanner(System.in);
 
   public static void main(String[] args) {
@@ -15,13 +15,13 @@ public class Main {
           Create.create(boardList);
           break;
 
-//        case 2:
-//          Visit.visit(boardList);
-//          break;
-//
-//        case 3:
-//          Remove.remove(boardList);
-//          break;
+        case 2:
+          Visit.visit(boardList);
+          break;
+
+        case 3:
+          Remove.remove(boardList);
+          break;
 
         case 4:
           Edit.edit(boardList);
