@@ -16,13 +16,31 @@ public class Create {
         System.out.println("제목: ");
         board.title = scanner.nextLine();
 
+        // 제목이 공란일 경우
+        if(board.title.isBlank()){
+            System.out.println("제목은 비워둘 수 없습니다.");
+            return;
+        }
+
         // 내용 입력
         System.out.println("내용: ");
         board.content = scanner.nextLine();
 
+        // 내용이 공란일 경우
+        if(board.content.isBlank()){
+            System.out.println("내용은 비워둘 수 없습니다.");
+            return;
+        }
+
         // 작성자
         System.out.println("작성자: ");
         board.writer = scanner.nextLine();
+
+        // 작성자가 공란일 경우
+        if(board.writer.isBlank()){
+            System.out.println("작성자는 비워둘 수 없습니다.");
+            return;
+        }
 
         // 날짜 (현재 날짜)
         board.date = LocalDate.now().toString();
@@ -33,3 +51,4 @@ public class Create {
         System.out.println("추가되었습니다.");
     }
 }
+
