@@ -7,6 +7,13 @@ public class Main {
 
   public static void main(String[] args) {
     while(true) {
+      
+      System.out.println("\n");
+      System.out.println("==============================");
+      ListAll.listall(boardList);
+      System.out.println("==============================");
+      System.out.println("\n");
+      
       menu();
       int choice = Integer.parseInt(scanner.nextLine());
 
