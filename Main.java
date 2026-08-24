@@ -2,20 +2,28 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-  static ArrayList<Board> boardList = new ArrayList<>(); 
+  static ArrayList<Board> boardList = new ArrayList<>();
   static Scanner scanner = new Scanner(System.in);
 
   public static void main(String[] args) {
     while(true) {
-      
+
       System.out.println("\n");
       System.out.println("==============================");
       ListAll.listall(boardList);
       System.out.println("==============================");
       System.out.println("\n");
-      
+
       menu();
-      int choice = Integer.parseInt(scanner.nextLine());
+
+      int choice = 0;
+
+      try{
+        choice = Integer.parseInt(scanner.nextLine());
+      } catch (NumberFormatException e) {
+        System.out.println("숫자만 입력해 주세요.");
+        return;
+      }
 
       switch(choice){
         case 1:
@@ -46,7 +54,7 @@ public class Main {
     }
   }
   private static void menu() {
-    System.out.println("[게시판]");
+    System.out.println("[Menu]");
     System.out.println("1. 작성");
     System.out.println("2. 조회");
     System.out.println("3. 삭제");
