@@ -6,6 +6,12 @@ class Visit{
 
         Scanner sc = new Scanner(System.in);
 
+        // 게시글이 없을 때
+        if(boardList.size() == 0){
+            System.out.println("error !");
+            return;
+        }
+
         System.out.println("Look it up ? (y/n)");
         String yn = sc.nextLine();
 
@@ -13,21 +19,22 @@ class Visit{
             int k = boardList.size();
             int n = 0;
             boolean d = false;
-            System.out.println("What's title ?");   //어떤 게시글 조회?
-            String ti = sc.nextLine();              //제목 입력 받음
 
-            for(int i = 0; i < k; i++) {           //title에 맞는 id 찾기
+            System.out.println("What's title ?");
+            String ti = sc.nextLine();
+
+            for(int i = 0; i < k; i++) {
                 if (ti.equals(boardList.get(i).title)){
                     d = true;
-                    n = boardList.get(i).id;
+                    n = i;  // id가 아니라 index 저장
                 }
             }
             if(!d){
-                System.out.println("error !");  //입력 받은 제목과 게시글의 제목이 다르면 error 표시
+                System.out.println("error !");
             }
             if(d) {
                 System.out.println(boardList.get(n).id + boardList.get(n).writer + boardList.get(n).title + boardList.get(n).date);
-                System.out.println(boardList.get(n).content);          //타이틀에 연결된 내용 불러옴
+                System.out.println(boardList.get(n).content);
             }
         }
     }
