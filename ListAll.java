@@ -5,7 +5,7 @@ public class ListAll {
         System.out.println("[Next's 게시판]");
 
         if(boardList.isEmpty()) {
-            System.out.println("Empty");
+            System.out.println("작성된 게시글이 없습니다.");
         }
 
         for(Board board : boardList) {
