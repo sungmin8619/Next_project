@@ -12,7 +12,7 @@ class Visit{
             return;
         }
 
-        System.out.println("Look it up ? (y/n)");
+        System.out.println("조회하시겠습니까 ? (y/n)");
         String yn = sc.nextLine();
 
         if(yn.equals("y")){
@@ -20,13 +20,13 @@ class Visit{
             int n = 0;
             boolean d = false;
 
-            System.out.println("What's title ?");
+            System.out.println("제목을 입력해주세요.");
             String ti = sc.nextLine();
 
             for(int i = 0; i < k; i++) {
                 if (ti.equals(boardList.get(i).title)){
                     d = true;
-                    n = i;  // id가 아니라 index 저장
+                    n = i + 1;  // id가 아니라 index 저장
                 }
             }
             if(!d){
