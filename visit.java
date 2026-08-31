@@ -8,7 +8,7 @@ public class Visit{
 
         // 게시글이 없을 때
         if(boardList.size() == 0){
-            System.out.println("error !");
+            System.out.println("게시글이 없습니다 !");
             return;
         }
 
@@ -30,7 +30,7 @@ public class Visit{
                 }
             }
             if(!d){
-                System.out.println("error !");
+                System.out.println("찾으시는 제목이 없습니다 !");
             }
             if(d) {
                 System.out.println(boardList.get(n).id + boardList.get(n).writer + boardList.get(n).title + boardList.get(n).date);
