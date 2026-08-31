@@ -43,6 +43,10 @@ public class Main {
           break;
 
         case 5:
+          Back_Up.restore(boardList);
+          break;
+
+        case 6:
           System.out.println("게시판을 종료합니다.");
           return;
 
@@ -56,10 +60,11 @@ public class Main {
   private static void menu() {
     System.out.println("[Menu]");
     System.out.println("1. 작성");
-    System.out.println("2. 조회");
+    System.out.println("2. 조회");  
     System.out.println("3. 삭제");
     System.out.println("4. 수정");
-    System.out.println("5. 종료");
+    System.out.println("5. 게시글 복구");
+    System.out.println("6. 종료");
     System.out.println("메뉴를 선택해 주세요: ");
 
   }
