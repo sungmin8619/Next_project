@@ -26,7 +26,7 @@ public class Visit{
             for(int i = 0; i < k; i++) {
                 if (ti.equals(boardList.get(i).title)){
                     d = true;
-                    n = i + 1;  // id가 아니라 index 저장
+                    n = i;  // id가 아니라 index 저장
                 }
             }
             if(!d){
