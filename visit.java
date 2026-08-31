@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-class Visit{
+public class Visit{
     public static void visit(ArrayList<Board> boardList){
 
         Scanner sc = new Scanner(System.in);
